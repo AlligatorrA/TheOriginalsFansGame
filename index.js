@@ -3,58 +3,61 @@ const chalk = require("chalk");
 
 var score = 0
 var userName = readlineSync.question("Youe Name? \n ");
-console.log( chalk.blue("Hello " + userName))
-var option =  readlineSync.question("Are You fan of The Originals WebShow? \n ")
+console.log("Hello " +chalk.blue(  userName))
+var option =  readlineSync.question("Are You fan of The Originals WebShow?(y/n) \n ")
 
-if (option.toLowerCase() === "yes"){
+
+
+if (option.toLowerCase() === "y"){
+  console.log(chalk.yellow("lets play this game see how much you know about mikealson family\n select your option a,b,c or d "))
   var questions = [{
-    question:"Klaus Mikaelson was:  \n  1)vampire   2)Wolf   3)Hybrid \n ",
-    answer: "Hybrid"
+    question:"Klaus Mikaelson was:  \n a)vampire  \n b)Wolf  \n c)Hybrid \n\n ",
+    answer: "c"
   },
 {
   question: "what did Mikaelson  family Swear to themselves?  \n"+
-  "1)family always and forever 2)friendShip always and Forever 3)Love is power \n " ,
-  answer: "family always and forever"
+  " a)family always and forever \n b)friendShip always and Forever\n c)Love is power\n \n " ,
+  answer: "a"
 },
 {
   question: "klaus favourite sibling was \n "+
-  "1)Elijah 2)Rebekah 3)kol  \n" ,
-  answer: "Rebekah"
+  "a)Elijah \n b)Rebekah\n c)kol  \n\n" ,
+  answer: "b"
 },
 {
   question: "vampire Who always wears a suit  \n "+
-  "1)Elijah   2)klaus   3)kol  \n" ,
-  answer: "Elijah"
+  "a)Elijah  \n b)klaus  \n c)kol \n \n" ,
+  answer: "a"
 },
 {
   question: "'no one hurts my family and lives. NO ONE' said by:  \n"+
-  "1)Elijah   2)klaus   3)kol   4)Rebekah  \n" ,
-  answer: "Elijah"
+  " a)Elijah  \n b)klaus  \n c)kol \n d)Rebekah \n \n" ,
+  answer: "a"
 },
 {
   question: "'Don't understimate the allure of Darkness, Stefan. Even the Purest hearts are drawn to it:  \n"+
-  "1)Elijah   2)klaus   3)kol   4)Rebekah  \n" ,
-  answer: "klaus"
+  " a)Elijah \n b)klaus \n c)kol \n d)Rebekah  \n\n" ,
+  answer: "b"
 },
 {
   question: "I've broken one of your rules. And yet I cannot be killed. I am immortal. Who has the power now, friend?: said by  \n "+
-  "1)Elijah   2)klaus   3)kol   4)Rebekah  \n" ,
-  answer: "klaus"
+  "a)Elijah  \n b)klaus  \n c)kol \n d)Rebekah \n \n" ,
+  answer: "b"
 },
 {
   question: "'I know you are obssed with me' said by:  \n "+
-  "1)Elijah   2)klaus   3)stefen   4)Damon  \n " ,
-  answer:"Damon"
+  "a)Elijah \n b)klaus \n c)stefen  \n d)Damon \n \n " ,
+  answer:"d"
 },
 {
   question: "'Meet Your Maker' said by:  \n "+
-  "1)Elijah   2)klaus   3)stefen   4)Damon  \n " ,
-  answer:"klaus"
+  "a)Elijah  \n b)klaus \n c)stefen \n d)Damon \n \n " ,
+  answer:"b"
 },
 {
   question: "'A warrior fights for what they believe in. A warrior fights for his family.' said by:  \n "+
-  "1)Elijah   2)klaus   3)stefen   4)Damon  \n " ,
-  answer:"klaus"
+  "a)Elijah  \n b)klaus \n c)rebekah  \n d)Damon  \n \n" ,
+  answer:"b"
 }]
 
   function play(question, answer){
@@ -73,11 +76,13 @@ if (option.toLowerCase() === "yes"){
         currentQuestion = questions[i];
       play(currentQuestion.question, currentQuestion.answer);
     }
+  
 
 
-
-  console.log(chalk.blue("Your Score is: "+ score))  
-
+  console.log(chalk.blue("Dear "+ userName +" Your Score is: "+ score))  
+     if(score == "100"){
+       console.log("*********** Wow You are a True Fan of 'The Original' webShow you Scored 100/100 ***********")
+     }
 
 
 
