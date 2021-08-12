@@ -94,6 +94,6 @@ if (option.toLowerCase() === "y"){
 
 
 
-}else if (option.toLowerCase() === "no"){
+}else if (option.toLowerCase() === "n"){
    console.log(chalk.red("You Enter no 😞 "))
 }
