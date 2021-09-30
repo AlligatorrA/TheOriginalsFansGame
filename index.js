@@ -66,6 +66,7 @@ if (option.toLowerCase() === "y"){
     if (userAnswer.toLowerCase() == answer.toLowerCase()){
       console.log(chalk.green("Right Answer"))
       score = score+10
+      console.log(score)
 
     }else{
       console.log(chalk.red("Wrong Answer  "))
